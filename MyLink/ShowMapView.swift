@@ -12,6 +12,7 @@ import SwiftUI
 
 struct ShowMapView: View {
 //    @State private var path: [Int] = []
+    @State var isActive: Bool = false
     @State private var mapUserTrackingMode: MapUserTrackingMode = .follow
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: -6.302139339689601,
@@ -160,7 +161,7 @@ struct ShowMapView: View {
             .navigationBarBackButtonHidden(true)
             .onAppear {
                 viewModel.requestAuthorization()
-        }
+            }
         }
     }
 }

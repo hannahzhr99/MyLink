@@ -8,31 +8,42 @@
 import SwiftUI
 
 struct LandingPage: View {
+    @State var isActive: Bool = false
+    
     var body: some View {
-        ZStack{
-            Rectangle()
-                .foregroundColor(Color("PO-500"))
-                .edgesIgnoringSafeArea(.all)
-            VStack{
-                Circle()
-                    .foregroundColor(.white)
-                    .frame(width: 200)
-                Spacer()
-                    .frame(height: 50)
-                Button(action: {
-                            // Button action code here
-                            print("Button tapped")
-                        }) {
-                            Text("Get Started")
-                                .fontWeight(.bold)
-                                .font(.system(size: 17))
-                                .foregroundColor(Color("PO-500"))
-                                .padding()
-                                .frame(height: 44)
-                                .background(Color.white)
-                                .cornerRadius(6)
-                        }
-                        .frame(width: 200, height: 50)
+        if isActive {
+            ShowMapView()
+        }
+        else {
+            ZStack{
+                Rectangle()
+                    .foregroundColor(Color("PO-500"))
+                    .edgesIgnoringSafeArea(.all)
+                VStack{
+                    Image("Icon Splash")
+                     
+                    Spacer()
+                        .frame(height: 140)
+                        
+                    NavigationLink(destination: ShowMapView()) {
+                        Text("Find Bus Routes")
+                            .fontWeight(.bold)
+                            .font(.system(size: 17))
+                            .foregroundColor(Color("PO-500"))
+                            .padding()
+                            .frame(height: 44)
+                            .background(Color.white)
+                            .cornerRadius(6)
+                    }
+                    .frame(width: 200, height: 50)
+                }
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    withAnimation {
+                        self.isActive = true
+                    }
+                }
             }
         }
     }

@@ -12,6 +12,7 @@ struct SuggestedPage: View {
     var placeholder1: String
     var placeholder2: String
     var placeholder3: String
+//    @Binding var rootIsActive : Bool
     var data: Location
 //    @Binding var path: [Int]
     

@@ -15,16 +15,19 @@ struct SuggestedRouteTemplate: View {
     var body: some View {
         HStack (alignment: .center, spacing: 32) {
             VStack (alignment: .leading, spacing: 6){
-                Text(namaRute)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 17))
-                    .foregroundColor(Color("Green"))
+                HStack {
+                    Text(namaRute)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 17))
+                        .foregroundColor(Color("Green"))
+                    Spacer()
+                }
                 Text(originRute)
                     .fontWeight(.medium)
                     .font(.system(size: 15))
                     .foregroundColor(Color("Systemgray2-Light"))
             }
-            Spacer()
+//            Spacer()
             VStack{
                 Text(jam)
                     .fontWeight(.semibold)
