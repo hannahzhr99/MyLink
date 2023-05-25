@@ -4,15 +4,7 @@
 ////
 ////  Created by Hannah's Mac on 22/05/23.
 ////
-//
-///*
-// ToDo :
-// - Membuat map UDAH
-// - Membuat annotation PROGRESS
-// - Mendeteksi current position BELUM
-// - Map yang di display di current position BELUM
-// 
-// */
+
 //
 //import MapKit
 //import SwiftUI
