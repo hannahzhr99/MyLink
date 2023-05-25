@@ -52,12 +52,12 @@ struct MapPage: View {
     }
         
     var searchResults: [Location] {
-            if destination.isEmpty {
-                return locations
-            } else {
-                return locations.filter { $0.destinationPoint.contains(destination) }
-            }
+        if destination.isEmpty {
+            return locations
+        } else {
+            return locations.filter { $0.destinationPoint.contains(destination) }
         }
+    }
 }
 
 struct MapPage_Previews: PreviewProvider {

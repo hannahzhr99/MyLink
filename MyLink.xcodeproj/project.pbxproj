@@ -21,7 +21,6 @@
 		1F422A052A17713000A97608 /* SuggestedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F422A042A17713000A97608 /* SuggestedPage.swift */; };
 		1F422A0B2A1A7A7B00A97608 /* RouteListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F422A0A2A1A7A7B00A97608 /* RouteListPage.swift */; };
 		1F4ED7C32A1F00AA000EE465 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4ED7C22A1F00AA000EE465 /* LocationViewModel.swift */; };
-		1F77694A2A1DCDD7002360BD /* ShowMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7769492A1DCDD7002360BD /* ShowMapView.swift */; };
 		1FC3DCE92A1B231100B9DA19 /* ListShuttles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3DCE82A1B231100B9DA19 /* ListShuttles.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		1F422A042A17713000A97608 /* SuggestedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedPage.swift; sourceTree = "<group>"; };
 		1F422A0A2A1A7A7B00A97608 /* RouteListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListPage.swift; sourceTree = "<group>"; };
 		1F4ED7C22A1F00AA000EE465 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
-		1F7769492A1DCDD7002360BD /* ShowMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMapView.swift; sourceTree = "<group>"; };
 		1FC3DCE82A1B231100B9DA19 /* ListShuttles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListShuttles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,7 +112,6 @@
 			children = (
 				1F4229D12A176AB500A97608 /* MyLinkApp.swift */,
 				1F4229D32A176AB500A97608 /* ContentView.swift */,
-				1F7769492A1DCDD7002360BD /* ShowMapView.swift */,
 				1FC3DCE82A1B231100B9DA19 /* ListShuttles.swift */,
 				1F422A002A176AC500A97608 /* LandingPage.swift */,
 				1F422A022A176E8B00A97608 /* MapPage.swift */,
@@ -288,7 +285,6 @@
 				1FC3DCE92A1B231100B9DA19 /* ListShuttles.swift in Sources */,
 				1F4229DB2A176AB600A97608 /* Persistence.swift in Sources */,
 				1F422A012A176AC500A97608 /* LandingPage.swift in Sources */,
-				1F77694A2A1DCDD7002360BD /* ShowMapView.swift in Sources */,
 				1F4ED7C32A1F00AA000EE465 /* LocationViewModel.swift in Sources */,
 				1F4229D42A176AB500A97608 /* ContentView.swift in Sources */,
 				1F422A032A176E8B00A97608 /* MapPage.swift in Sources */,
@@ -458,7 +454,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "qw;elqlkwmelqkwem";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -490,7 +486,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "qw;elqlkwmelqkwem";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
