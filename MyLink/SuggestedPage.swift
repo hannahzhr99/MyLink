@@ -12,6 +12,8 @@ struct SuggestedPage: View {
     var placeholder1: String
     var placeholder2: String
     var placeholder3: String
+    var data: Location
+//    @Binding var path: [Int]
     
     var body: some View {
         //        ForEach((1...2), id: \.self){
@@ -57,66 +59,27 @@ struct SuggestedPage: View {
                     .font(.system(size: 15))
                 
                 VStack (spacing: 20) {
-                    HStack (alignment: .center, spacing: 32) {
-                        VStack (alignment: .leading, spacing: 6){
-                            Text(placeholder1)
-                                .fontWeight(.semibold)
-                                .font(.system(size: 17))
-                                .foregroundColor(Color("Green"))
-                            Text(placeholder2)
-                                .fontWeight(.medium)
-                                .font(.system(size: 15))
-                                .foregroundColor(Color("Systemgray2-Light"))
-                        }
-                        VStack{
-                            Text(placeholder3)
-                                .fontWeight(.semibold)
-                                .font(.system(size: 18))
-                                .foregroundColor(Color("Black"))
+                    VStack {
+                        ForEach(data.time, id: \.self) { loc in
+                            NavigationLink(destination: RouteListPage(data: data, jam: loc)){
+                                SuggestedRouteTemplate(namaRute: data.namaRute, originRute: data.currentPoint, jam: loc[0])
+                            }
+                            
                         }
                     }
-                    .padding()
-                    .frame(minWidth: 361)
-                    .background(Color(.white))
-                    .cornerRadius(6)
-                    .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
-                    
-                    HStack (alignment: .center, spacing: 32) {
-                        VStack (alignment: .leading, spacing: 6){
-                            Text("Intermoda-De Park (Rute 1) Bus")
-                                .fontWeight(.semibold)
-                                .font(.system(size: 17))
-                                .foregroundColor(Color("Green"))
-                            Text("The Breeze")
-                                .fontWeight(.medium)
-                                .font(.system(size: 15))
-                                .foregroundColor(Color("Systemgray2-Light"))
-                        }
-                        VStack{
-                            Text("12.05")
-                                .fontWeight(.semibold)
-                                .font(.system(size: 18))
-                                .foregroundColor(Color("Black"))
-                        }
-                    }
-                    .padding()
-                    .frame(minWidth: 361)
-                    .background(Color(.white))
-                    .cornerRadius(6)
-                    .shadow(color: Color.black.opacity(0.1), radius: 3, x: 1, y: 2)
                 }
             }
             Spacer()
         }
-        .navigationBarBackButtonHidden(false)
+        .navigationBarBackButtonHidden(true)
         //        }
     }
 }
-
-#if DEBUG
-struct SuggestedPage_Previews: PreviewProvider {
-    static var previews: some View {
-        SuggestedPage(destination: "Terminal Intermoda", placeholder1: "test", placeholder2: "test", placeholder3: "test")
-    }
-}
-#endif
+//
+//#if DEBUG
+//struct SuggestedPage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SuggestedPage(destination: "Terminal Intermoda", placeholder1: "test", placeholder2: "test", placeholder3: "test")
+//    }
+//}
+//#endif

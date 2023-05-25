@@ -8,60 +8,48 @@
 import SwiftUI
 
 struct RouteListPage: View {
+    @Environment(\.presentationMode) var presentationMode
+    var data: Location
+    var jam: [String]
+    
     var body: some View {
         VStack (alignment: .center, spacing: 6) {
-            VStack (alignment: .leading, spacing: 2) {
-                Text("Intermoda-De Park (Rute 1) Bus")
-                    .foregroundColor(Color("Green"))
-                    .fontWeight(.semibold)
-                    .font(.system(size: 15))
-                Text("Your routes")
-                    .foregroundColor(Color(.black))
-                    .fontWeight(.semibold)
-                    .font(.system(size: 26))
-            }
-            .padding(.trailing, 130)
-            
-            VStack (alignment: .leading, spacing: 20) {
-                HStack {
-                    HStack (spacing: 12){
-                        Image(systemName: "circle.fill")
-                            .foregroundColor(Color("PO-500"))
-                            .font(.system(size: 18))
-                        Text("The Breeze")
-                            .fontWeight(.semibold)
-                            .font(.system(size: 17))
-                            .foregroundColor(Color(.black))
-                    }
-                    Spacer()
-                    HStack {
-                        Text("12.05")
-                            .fontWeight(.semibold)
-                            .font(.system(size: 18))
-                            .foregroundColor(Color("Black"))
-                    }
+            HStack {
+                VStack (alignment: .leading, spacing: 2) {
+                    Text("\(data.namaRute)")
+                        .foregroundColor(data.namaRute == "Electric Bus" ? Color("Blue") : Color("Green"))
+                        .fontWeight(.semibold)
+                        .font(.system(size: 15))
+                    Text("Your routes")
+                        .foregroundColor(Color(.black))
+                        .fontWeight(.semibold)
+                        .font(.system(size: 26))
                 }
-                
-                                HStack {
-                                    VStack (spacing: 2.7) {
-                                        Image(systemName: "circle.fill")
-                                            .foregroundColor(Color("PO-500"))
-                                            .font(.system(size: 4))
-                                        Image(systemName: "circle.fill")
-                                            .foregroundColor(Color("PO-500"))
-                                            .font(.system(size: 4))
-                                        Image(systemName: "circle.fill")
-                                            .foregroundColor(Color("PO-500"))
-                                            .font(.system(size: 4))
-                                    }
-                                }
-                                .padding(.init(top: -20, leading: 8, bottom: 0, trailing: 0))
+                .padding(.trailing, 130)
+                .padding(.top,10)
+                .padding(.leading)
+                .padding(.bottom)
+                Spacer()
+            }
+           
+            
+            VStack {
+                ForEach(Array(locations.enumerated()), id: \.element.id) { index, loc in
+                    if index < locations.count-1 {
+                        RouteListTemplate(route: loc.rute[0], jam: loc.time[0][index])
+                    }
+                    else {
+                        RouteListLast(route: loc.rute[0], jam: loc.time[0][0])
+                    }
+                    
+                }
             }
             .padding()
             Spacer()
             
-            NavigationLink {
-                //                SuggestedPage(Destination: $Destination)
+            Button {
+                presentationMode.wrappedValue.dismiss()
+                
             } label: {
                 Text("Start Over")
                     .padding()
@@ -72,12 +60,13 @@ struct RouteListPage: View {
                     .background(Color("PO-500"))
                     .cornerRadius(6)
             }
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
 
-struct RouteListPage_Previews: PreviewProvider {
-    static var previews: some View {
-        RouteListPage()
-    }
-}
+//struct RouteListPage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RouteListPage(data: Location())
+//    }
+//}
