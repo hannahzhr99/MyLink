@@ -16,6 +16,13 @@
 		1F4229E82A176AB600A97608 /* MyLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4229E72A176AB600A97608 /* MyLinkTests.swift */; };
 		1F4229F22A176AB600A97608 /* MyLinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4229F12A176AB600A97608 /* MyLinkUITests.swift */; };
 		1F4229F42A176AB600A97608 /* MyLinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4229F32A176AB600A97608 /* MyLinkUITestsLaunchTests.swift */; };
+		1F422A012A176AC500A97608 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F422A002A176AC500A97608 /* LandingPage.swift */; };
+		1F422A032A176E8B00A97608 /* MapPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F422A022A176E8B00A97608 /* MapPage.swift */; };
+		1F422A052A17713000A97608 /* SuggestedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F422A042A17713000A97608 /* SuggestedPage.swift */; };
+		1F422A0B2A1A7A7B00A97608 /* RouteListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F422A0A2A1A7A7B00A97608 /* RouteListPage.swift */; };
+		1F4ED7C32A1F00AA000EE465 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4ED7C22A1F00AA000EE465 /* LocationViewModel.swift */; };
+		1F77694A2A1DCDD7002360BD /* ShowMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7769492A1DCDD7002360BD /* ShowMapView.swift */; };
+		1FC3DCE92A1B231100B9DA19 /* ListShuttles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3DCE82A1B231100B9DA19 /* ListShuttles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,13 @@
 		1F4229ED2A176AB600A97608 /* MyLinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4229F12A176AB600A97608 /* MyLinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLinkUITests.swift; sourceTree = "<group>"; };
 		1F4229F32A176AB600A97608 /* MyLinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1F422A002A176AC500A97608 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		1F422A022A176E8B00A97608 /* MapPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPage.swift; sourceTree = "<group>"; };
+		1F422A042A17713000A97608 /* SuggestedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedPage.swift; sourceTree = "<group>"; };
+		1F422A0A2A1A7A7B00A97608 /* RouteListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListPage.swift; sourceTree = "<group>"; };
+		1F4ED7C22A1F00AA000EE465 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		1F7769492A1DCDD7002360BD /* ShowMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMapView.swift; sourceTree = "<group>"; };
+		1FC3DCE82A1B231100B9DA19 /* ListShuttles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListShuttles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +114,17 @@
 			children = (
 				1F4229D12A176AB500A97608 /* MyLinkApp.swift */,
 				1F4229D32A176AB500A97608 /* ContentView.swift */,
+				1F7769492A1DCDD7002360BD /* ShowMapView.swift */,
+				1FC3DCE82A1B231100B9DA19 /* ListShuttles.swift */,
+				1F422A002A176AC500A97608 /* LandingPage.swift */,
+				1F422A022A176E8B00A97608 /* MapPage.swift */,
+				1F422A042A17713000A97608 /* SuggestedPage.swift */,
+				1F422A0A2A1A7A7B00A97608 /* RouteListPage.swift */,
 				1F4229D52A176AB600A97608 /* Assets.xcassets */,
 				1F4229DA2A176AB600A97608 /* Persistence.swift */,
 				1F4229DC2A176AB600A97608 /* MyLink.xcdatamodeld */,
 				1F4229D72A176AB600A97608 /* Preview Content */,
+				1F4ED7C22A1F00AA000EE465 /* LocationViewModel.swift */,
 			);
 			path = MyLink;
 			sourceTree = "<group>";
@@ -263,9 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F422A052A17713000A97608 /* SuggestedPage.swift in Sources */,
+				1FC3DCE92A1B231100B9DA19 /* ListShuttles.swift in Sources */,
 				1F4229DB2A176AB600A97608 /* Persistence.swift in Sources */,
+				1F422A012A176AC500A97608 /* LandingPage.swift in Sources */,
+				1F77694A2A1DCDD7002360BD /* ShowMapView.swift in Sources */,
+				1F4ED7C32A1F00AA000EE465 /* LocationViewModel.swift in Sources */,
 				1F4229D42A176AB500A97608 /* ContentView.swift in Sources */,
+				1F422A032A176E8B00A97608 /* MapPage.swift in Sources */,
 				1F4229D22A176AB500A97608 /* MyLinkApp.swift in Sources */,
+				1F422A0B2A1A7A7B00A97608 /* RouteListPage.swift in Sources */,
 				1F4229DE2A176AB600A97608 /* MyLink.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,11 +450,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyLink/Preview Content\"";
+				DEVELOPMENT_TEAM = B37X2T422Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,11 +482,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyLink/Preview Content\"";
+				DEVELOPMENT_TEAM = B37X2T422Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
