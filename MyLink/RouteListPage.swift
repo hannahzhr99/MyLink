@@ -35,12 +35,24 @@ struct RouteListPage: View {
            
             
             VStack {
-                ForEach(Array(locations.enumerated()), id: \.element.id) { index, loc in
+//                ForEach(data.rute, id: \.self) { loc in
+//                    RouteListTemplate(route: loc, jam: jam[0])
+//                }
+//                ForEach(Array(locations.enumerated()), id: \.element.id) { index, loc in
+//                    if index < locations.count-1 {
+//                        RouteListTemplate(route: loc.rute[0], jam: loc.time[0][index])
+//                    }
+//                    else {
+//                        RouteListLast(route: loc.rute[0], jam: loc.time[0][0])
+//                    }
+
+//                }
+                ForEach(Array(data.rute.enumerated()), id: \.element.self) { index, loc in
                     if index < locations.count-1 {
-                        RouteListTemplate(route: loc.rute[0], jam: loc.time[0][index])
+                        RouteListTemplate(route: loc, jam: jam[index])
                     }
                     else {
-                        RouteListLast(route: loc.rute[0], jam: loc.time[0][0])
+                        RouteListLast(route: loc, jam: jam[index])
                     }
                     
                 }
