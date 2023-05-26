@@ -19,7 +19,7 @@ struct SuggestedRouteTemplate: View {
                     Text(namaRute)
                         .fontWeight(.semibold)
                         .font(.system(size: 17))
-                        .foregroundColor(Color("Green"))
+                        .foregroundColor(namaRute == "Electric Bus" ? Color("Blue") : Color("Green"))
                     Spacer()
                 }
                 Text(originRute)

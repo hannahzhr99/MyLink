@@ -12,7 +12,7 @@ struct SuggestedPage: View {
     var placeholder1: String
     var placeholder2: String
     var placeholder3: String
-//    @Binding var rootIsActive : Bool
+    @Binding var rootIsActive : Bool
     var data: Location
 //    @Binding var path: [Int]
     
@@ -62,7 +62,7 @@ struct SuggestedPage: View {
                 VStack (spacing: 20) {
                     VStack {
                         ForEach(data.time, id: \.self) { loc in
-                            NavigationLink(destination: RouteListPage(data: data, jam: loc)){
+                            NavigationLink(destination: RouteListPage(popToRoot: self.$rootIsActive, data: data, jam: loc)){
                                 SuggestedRouteTemplate(namaRute: data.namaRute, originRute: data.currentPoint, jam: loc[0])
                             }
                             

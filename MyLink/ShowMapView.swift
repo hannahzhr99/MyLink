@@ -124,7 +124,7 @@ struct ShowMapView: View {
                                     VStack(alignment: .leading, spacing: -0) {
                                         VStack(alignment: .leading, spacing: 1) {
                                             HStack {
-                                                NavigationLink(destination: SuggestedPage(destination: place.destinationPoint, placeholder1: place.currentPoint, placeholder2: place.namaRute, placeholder3: place.namaRute, data: place)){
+                                                NavigationLink(destination: SuggestedPage(destination: place.destinationPoint, placeholder1: place.currentPoint, placeholder2: place.namaRute, placeholder3: place.namaRute,rootIsActive: $isActive, data: place), isActive: self.$isActive){
                                                     Text(place.destinationPoint)
                                                         .font(.system(size: 14))
                                                 }

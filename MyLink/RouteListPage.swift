@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RouteListPage: View {
-    @Environment(\.presentationMode) var presentationMode
+//    @Environment(\.presentationMode) var presentationMode
+    @Binding var popToRoot : Bool
     var data: Location
     var jam: [String]
     
@@ -48,7 +49,8 @@ struct RouteListPage: View {
             Spacer()
             
             Button {
-                presentationMode.wrappedValue.dismiss()
+//                presentationMode.wrappedValue.dismiss()
+                self.popToRoot = false
                 
             } label: {
                 Text("Start Over")
